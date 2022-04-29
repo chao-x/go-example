@@ -8,7 +8,6 @@ import (
 
 var data int
 
-
 func RaceUnsafe() {
 	go func() {
 		data++
@@ -38,6 +37,3 @@ func RaceSafeByLock() {
 	memoryAccess.Unlock()
 
 }
-
-
-

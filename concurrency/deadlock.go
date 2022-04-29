@@ -7,13 +7,13 @@ import (
 )
 
 type value struct {
-	mu sync.Mutex
+	mu    sync.Mutex
 	value int
 }
 
 var wg sync.WaitGroup
 
-func printSum(v1,v2 *value) {
+func printSum(v1, v2 *value) {
 	defer wg.Done()
 
 	v1.mu.Lock()
@@ -28,7 +28,7 @@ func printSum(v1,v2 *value) {
 }
 
 func main() {
-	var v1,v2 value
+	var v1, v2 value
 	wg.Add(2)
 	go printSum(&v1, &v2)
 	go printSum(&v2, &v1)
