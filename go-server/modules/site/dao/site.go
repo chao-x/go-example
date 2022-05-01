@@ -9,7 +9,7 @@ type SiteDao struct {
 	DB *gorm.DB
 }
 
-func(sd *SiteDao) AddSite(site *model.Site) {
+func (sd *SiteDao) AddSite(site *model.Site) {
 	sd.DB.AutoMigrate(&model.Site{})
 	sd.DB.Create(&site)
 }

@@ -16,8 +16,7 @@ func (sc *SiteController) AddSite(c *gin.Context) {
 	var err error
 	err = c.ShouldBindJSON(&params)
 	if err != nil {
-		c.JSON(http.StatusBadRequest,&base.ErrUnmarshalJsonParam)
+		c.JSON(http.StatusBadRequest, &base.ErrUnmarshalJsonParam)
 		return
 	}
 }
-

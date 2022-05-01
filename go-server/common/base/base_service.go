@@ -8,6 +8,6 @@ import (
 type BaseService struct {
 }
 
-func (bc * BaseService) GetDB()*gorm.DB {
+func (bc *BaseService) GetDB() *gorm.DB {
 	return mysql.DB
 }

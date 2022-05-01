@@ -10,7 +10,7 @@ type SiteService struct {
 	*base.BaseService
 }
 
-func (ss *SiteService) AddSite(site *model.Site){
+func (ss *SiteService) AddSite(site *model.Site) {
 	ss.GetDB()
 	siteDao := dao.SiteDao{DB: ss.GetDB()}
 	siteDao.AddSite(site)
