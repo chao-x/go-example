@@ -19,7 +19,7 @@ func Cond() {
 			fmt.Println("协程  ", i, "加锁")
 
 			// Wait 做了什么
-			// 解锁 -> 切走goroutine -> 等待唤醒 -> 据需上锁
+			// 解锁 -> 切走goroutine -> 等待唤醒 -> 上锁
 			// 这里解锁才能使其他线程获得锁
 			cond.Wait()
 
