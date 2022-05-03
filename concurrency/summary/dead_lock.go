@@ -28,12 +28,12 @@ func printSum(v1, v2 *value) {
 	fmt.Printf("sum = %v\n", v1.value+v2.value)
 }
 
-// deadLock 死锁
+// DeadLock 死锁
 // 相互排斥，都拥有资源的独占权
 // 等待条件，都拥有一个资源，并且等待额外资源
 // 没有抢占，拥有资源只能等待他自己释放
 // 循环等待，都在互相等待对方释放资源
-func deadLock() {
+func DeadLock() {
 	var v1, v2 value
 	wg.Add(2)
 	go printSum(&v1, &v2)
