@@ -1,4 +1,4 @@
-package sync_example
+package _sync
 
 import (
 	"fmt"

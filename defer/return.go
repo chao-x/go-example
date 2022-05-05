@@ -34,7 +34,10 @@ func NameClosureReturn() (r int) { //
 	return 6
 }
 
-func NameReturn() (r int) { //有名返回值
+// NameReturn 实名函数返回
+// 虽然实名返回一直用的是一块内存
+// 但是函数会对参数做copy, 函数内和返回值不是一块内存
+func NameReturn() (r int) {
 	defer func(r int) {
 		r *= 7
 	}(r)
