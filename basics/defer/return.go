@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package _defer
 
 // defer的触发机制:
 // 包裹defer的函数返回时
@@ -42,11 +40,4 @@ func NameReturn() (r int) {
 		r *= 7
 	}(r)
 	return 6
-}
-
-func main() {
-	x1 := AnonymousReturn()
-	x2 := NameClosureReturn()
-	x3 := NameReturn()
-	fmt.Println(x1, x2, x3) // 6, 42, 6
 }
