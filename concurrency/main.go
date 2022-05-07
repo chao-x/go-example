@@ -1,7 +1,7 @@
 package main
 
-import "concurrency/summary"
-
 func main() {
-	summary.Hungry()
+	//component.Address()
+	//component.AddressSalutation()
+	//component.Memory()
 }
